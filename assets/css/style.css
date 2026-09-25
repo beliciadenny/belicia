@@ -759,3 +759,29 @@ button:focus-visible {
 .nav-name span {
   text-shadow: 0 0 12px rgba(var(--accent-rgb), 0.6);
 }
+/* ---------- Back to Home button ---------- */
+.back-home {
+  position: fixed;
+  top: 88px;
+  left: 24px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.back-home:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateX(-3px);
+}
+@media (max-width: 700px) {
+  .back-home { top: 80px; left: 14px; padding: 7px 12px; font-size: 0.8rem; }
+}
