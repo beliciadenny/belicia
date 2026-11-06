@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belicia Denny | Data &amp; Analytics Portfolio</title>
+<meta name="description" content="Portfolio of Belicia Denny showcasing Data Analytics, Business Intelligence, Machine Learning and Data Quality projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-name">Belicia<span>.</span>Denny</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas class="hero-canvas"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <span class="open-badge"><i></i>Open to work</span>
+      <div class="eyebrow">DATA · ANALYTICS · BUSINESS INTELLIGENCE</div>
+      <h1>Belicia Denny</h1>
+      <p class="role-line">Data Analyst · Business Intelligence · Machine Learning</p>
+      <p class="lede">I build data-driven solutions that transform raw datasets into meaningful insights through analytics, machine learning, interactive dashboards, and AI-powered data quality systems.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="../assets/resume/resume-data.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/beliciadenny" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/belicia-denny" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <span class="float-chip">SQL</span>
+      <span class="float-chip">Power BI</span>
+      <span class="float-chip">dbt</span>
+      <span class="float-chip">PostgreSQL</span>
+      <span class="float-chip">Pandas</span>
+      <span class="float-chip">Python</span>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">ABOUT ME</div>
+      <h2>Building data solutions that drive better decisions</h2>
+      <p>I'm a Computer Science graduate with a passion for transforming raw data into meaningful business insights. I enjoy solving real-world problems through analytics, machine learning, business intelligence, and data quality engineering.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h4>Business Analytics</h4>
+        <p>Building dashboards and reports that support business decision-making.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Data Quality</h4>
+        <p>Improving data reliability through profiling, validation, anomaly detection, and quality assessment.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Machine Learning</h4>
+        <p>Developing predictive models using NLP, classification algorithms, and feature engineering.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Business Intelligence</h4>
+        <p>Creating interactive Power BI dashboards and KPI-driven analytics solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">PROJECTS</div>
+      <h2>Questions worth answering</h2>
+      <p>Every project here started with a real question. Open one to see the screenshots, what I built, and the tools behind it.</p>
+    </div>
+
+    <div class="project-list">
+
+      <!-- 01 Revenue KPI Reconciliation Engine -->
+      <article class="project-row"
+        data-title="Revenue KPI Reconciliation Engine"
+        data-images="../assets/images/executive-summary.png|../assets/images/variance-bridge.png|../assets/images/exceptions.png"
+        data-captions="Executive summary|Variance bridge|Exceptions list">
+        <div class="row-media"><img src="../assets/images/executive-summary.png" alt="Revenue KPI Reconciliation dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">01</span>
+          <h3>Revenue KPI Reconciliation Engine</h3>
+          <p class="row-question">Why do Finance, Operations and Fulfillment report different revenue, and where exactly do the numbers split?</p>
+          <div class="row-tags"><span>dbt</span><span>DuckDB</span><span>SQL</span><span>Streamlit</span><span>Python</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Revenue KPI Reconciliation Engine">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 01 · Analytics Engineering</p>
+          <h3>Revenue KPI Reconciliation Engine</h3>
+          <p class="case-question">Why do Finance, Operations and Fulfillment report different revenue, and where exactly do the numbers split?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Compared what was billed, shipped and delivered across about 99,000 orders from the Olist Brazilian e-commerce dataset.</li>
+            <li>Split every order's gap into timing differences, definition differences (freight, vouchers, installment interest) and true discrepancies (cancellations, duplicate payments, amount mismatches, orders never shipped or delivered), then ranked the orders worth investigating.</li>
+            <li>Built the pipeline in SQL with dbt on DuckDB: staging, intermediate and mart layers, Jinja macros, seed files for the metric dictionary, and tests that check totals tie out.</li>
+            <li>Proved the detector works by planting 450 known errors in a copy of the data and scoring it on precision and recall.</li>
+            <li>Delivered the results in a Streamlit dashboard with a waterfall bridge, category breakdown, exceptions list with CSV export and a metric dictionary. GitHub Actions runs the build and tests on every push.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>pandas</span><span>NumPy</span><span>SQL</span><span>DuckDB</span><span>dbt Core</span><span>Jinja</span><span>Streamlit</span><span>Plotly</span><span>GitHub Actions</span><span>Make</span><span>Git</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/revenue-kpi-reconciliation" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Retail Inventory Data Warehouse -->
+      <article class="project-row"
+        data-title="Retail Inventory Data Warehouse"
+        data-images="../assets/images/retail.png"
+        data-captions="Dashboard overview">
+        <div class="row-media"><img src="../assets/images/retail.png" alt="Retail Inventory Data Warehouse dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">02</span>
+          <h3>Retail Inventory Data Warehouse</h3>
+          <p class="row-question">How do you trust stock numbers when four different data sources disagree?</p>
+          <div class="row-tags"><span>Python</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Docker</span><span>Power BI</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Retail Inventory Data Warehouse">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 02 · Data Engineering</p>
+          <h3>Retail Inventory Data Warehouse</h3>
+          <p class="case-question">How do you trust stock numbers when four different data sources disagree?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built an end-to-end ETL pipeline that consolidates warehouse inventory, sales, supplier deliveries and customer returns into a clean, reconciled star schema in PostgreSQL.</li>
+            <li>Added data quality validation, business-rule checks and schema drift detection.</li>
+            <li>Reconciled expected against actual stock to flag real discrepancies.</li>
+            <li>Tested it end-to-end against a live database, which surfaced and fixed 4 real bugs during development.</li>
+            <li>Connected the warehouse to a Power BI dashboard.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Pandas</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>psycopg2</span><span>APScheduler</span><span>Docker</span><span>Docker Compose</span><span>Power BI</span><span>pytest</span><span>SQL</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/retail-inventory-data-warehouse" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Meta Ad Performance Analysis -->
+      <article class="project-row"
+        data-title="Meta Ad Performance Analysis"
+        data-images="../assets/images/facebook.png|../assets/images/instagram.png"
+        data-captions="Facebook view|Instagram view">
+        <div class="row-media"><img src="../assets/images/facebook.png" alt="Meta Ad Performance dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">03</span>
+          <h3>Meta Ad Performance Analysis</h3>
+          <p class="row-question">Where does the ad funnel leak, and which platform, format and audience are worth the spend?</p>
+          <div class="row-tags"><span>Power BI</span><span>Funnel Analysis</span><span>KPI Design</span><span>Marketing Analytics</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Meta Ad Performance Analysis">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 03 · Marketing Analytics</p>
+          <h3>Meta Ad Performance Analysis</h3>
+          <p class="case-question">Where does the ad funnel leak, and which platform, format and audience are worth the spend?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built an interactive Power BI dashboard comparing Facebook and Instagram across the full funnel: impressions, clicks, CTR, purchases and conversion rate.</li>
+            <li>Broke performance down by age group, gender, location, time of day and ad format (Video, Story, Image, Carousel).</li>
+            <li>Found that females aged 18 to 30 are the most engaged segment, Video and Story ads outperform Image and Carousel, and engagement peaks in the afternoon and evening.</li>
+            <li>Showed that purchases lag behind engagement, which points to conversion as the main area to improve.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Power BI</span><span>Marketing Analytics</span><span>Data Transformation</span><span>KPI Design</span><span>Funnel Analysis</span><span>Data Visualization</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/Meta-Advertisement-Performance-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Remote Workforce Analytics Dashboard -->
+      <article class="project-row"
+        data-title="Remote Workforce Analytics Dashboard"
+        data-images="../assets/images/remote-overview.png|../assets/images/remote-productivity.png|../assets/images/remote-satisfaction.png"
+        data-captions="Workforce overview|Productivity &amp; burnout insights|Remote work experience &amp; satisfaction">
+        <div class="row-media"><img src="../assets/images/remote-overview.png" alt="Remote Workforce Analytics dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">04</span>
+          <h3>Remote Workforce Analytics Dashboard</h3>
+          <p class="row-question">Do remote, hybrid and on-site workers differ in productivity and engagement?</p>
+          <div class="row-tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Remote Workforce Analytics Dashboard">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 04 · Business Intelligence</p>
+          <h3>Remote Workforce Analytics Dashboard</h3>
+          <p class="case-question">Do remote, hybrid and on-site workers differ in productivity and engagement?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built a multi-page Power BI dashboard covering a workforce overview, productivity and burnout insights, and remote work experience and satisfaction.</li>
+            <li>Wrote DAX measures to compare remote, hybrid and on-site work models side by side.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/PowerBI-RemoteWork-Analysis" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 AI Data Quality Guardian -->
+      <article class="project-row"
+        data-title="AI Data Quality Guardian"
+        data-images="../assets/images/data-quality-guardian.png"
+        data-captions="Dashboard">
+        <div class="row-media"><img src="../assets/images/data-quality-guardian.png" alt="AI Data Quality Guardian dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">05</span>
+          <h3>AI Data Quality Guardian</h3>
+          <p class="row-question">How do you catch bad data before it ruins an analysis or a model?</p>
+          <div class="row-tags"><span>Python</span><span>Pandas</span><span>PostgreSQL</span><span>FastAPI</span><span>Docker</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: AI Data Quality Guardian">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 05 · Data Quality</p>
+          <h3>AI Data Quality Guardian</h3>
+          <p class="case-question">How do you catch bad data before it ruins an analysis or a model?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built a platform that profiles uploaded CSV and Excel datasets and scores their quality: missing values, duplicates, outliers and rule violations.</li>
+            <li>Added rule-based validation plus AI-generated recommendations for how to clean each issue.</li>
+            <li>Included JWT authentication, audit logging and PDF report generation.</li>
+            <li>Built it full-stack with FastAPI, PostgreSQL, React and TypeScript, packaged with Docker Compose.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Pandas</span><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>TypeScript</span><span>Docker</span><span>LangChain</span><span>Ollama</span></div>
+          <p class="case-note">Designed for local deployment with Docker Compose. The full source code, setup guide and documentation are in the GitHub repository.</p>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/ai-data-quality-guardian" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 Dark Pattern Detection -->
+      <article class="project-row"
+        data-title="Dark Pattern Detection"
+        data-images="../assets/images/dark-pattern.png"
+        data-captions="Power BI dashboard">
+        <div class="row-media"><img src="../assets/images/dark-pattern.png" alt="Dark Pattern Detection dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">06</span>
+          <h3>Dark Pattern Detection</h3>
+          <p class="row-question">Is this e-commerce page helping you shop, or quietly deceiving you?</p>
+          <div class="row-tags"><span>Python</span><span>NLP</span><span>XGBoost</span><span>Power BI</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Dark Pattern Detection">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 06 · NLP &amp; Analytics</p>
+          <h3>Dark Pattern Detection</h3>
+          <p class="case-question">Is this e-commerce page helping you shop, or quietly deceiving you?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Collected e-commerce page content through automated web scraping.</li>
+            <li>Detected deceptive interface patterns with NLP features and an XGBoost classifier, using SHAP to explain the predictions.</li>
+            <li>Mapped the findings to consumer protection guidelines.</li>
+            <li>Visualized the results in a Power BI dashboard.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>BeautifulSoup</span><span>NLP</span><span>XGBoost</span><span>SHAP</span><span>Power BI</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/dark-pattern-detection" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-ghost" href="https://github.com/beliciadenny/dark-pattern-detection/blob/main/dashboard/dark_pattern_dashboard.pdf" target="_blank" rel="noopener">Dashboard (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 Fake Review Detection -->
+      <article class="project-row"
+        data-title="Fake Review Detection"
+        data-images="../assets/images/fake-review.png"
+        data-captions="Streamlit app">
+        <div class="row-media"><img src="../assets/images/fake-review.png" alt="Fake Review Detection app" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">07</span>
+          <h3>Fake Review Detection</h3>
+          <p class="row-question">Which reviews are genuine, and which were written to mislead?</p>
+          <div class="row-tags"><span>Python</span><span>Scikit-learn</span><span>NLP</span><span>Streamlit</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Fake Review Detection">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 07 · Machine Learning</p>
+          <h3>Fake Review Detection</h3>
+          <p class="case-question">Which reviews are genuine, and which were written to mislead?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Turned review text into TF-IDF features and engineered signals for classification.</li>
+            <li>Trained a Random Forest classifier to separate genuine reviews from fraudulent ones.</li>
+            <li>Deployed it as a live Streamlit app that anyone can try.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Scikit-learn</span><span>NLP</span><span>TF-IDF</span><span>Random Forest</span><span>Streamlit</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://fake-review-detector-enpfumjyh4c6ckupxexppl.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="btn btn-ghost" href="https://github.com/beliciadenny/Fake-Review-Detector" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">TECHNICAL SKILLS</div>
+      <h2>Tools &amp; technologies</h2>
+      <p>Technologies and tools used for data analysis, business intelligence, machine learning, and data quality solutions.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>PROGRAMMING &amp; QUERY LANGUAGES</h4>
+        <div class="skill-tags"><span>Python</span><span>SQL</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>DATA ANALYSIS</h4>
+        <div class="skill-tags"><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Data Cleaning</span><span>Statistical Analysis</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>BUSINESS INTELLIGENCE</h4>
+        <div class="skill-tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Excel</span><span>Tableau</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>MACHINE LEARNING</h4>
+        <div class="skill-tags"><span>Scikit-learn</span><span>NLP</span><span>Classification</span><span>Feature Engineering</span><span>Model Evaluation</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>DATA QUALITY</h4>
+        <div class="skill-tags"><span>Data Profiling</span><span>Data Validation</span><span>Missing Value Analysis</span><span>Duplicate Detection</span><span>Outlier Detection</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>TOOLS &amp; TECHNOLOGIES</h4>
+        <div class="skill-tags"><span>dbt</span><span>DuckDB</span><span>PostgreSQL</span><span>Streamlit</span><span>Git</span><span>GitHub</span><span>Jupyter Notebook</span><span>Docker</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">EDUCATION</div>
+      <h2>Academic background</h2>
+    </div>
+    <div class="edu-card">
+      <div>
+        <h3>Bachelor of Technology (B.Tech)</h3>
+        <div class="edu-sub">Computer Science &amp; Engineering</div>
+        <p>Jyothi Engineering College, Kerala</p>
+      </div>
+      <div class="edu-year">Graduated 2025</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">CONTACT</div>
+      <h2>Let's connect</h2>
+      <p>Interested in discussing opportunities, collaborating on projects, or learning more about my work? Feel free to reach out.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:beliciadenny@gmail.com">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        </div>
+        <h4>EMAIL</h4>
+        <div class="value">beliciadenny@gmail.com</div>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/belicia-denny" target="_blank" rel="noopener">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.5 8.75h3.9V21h-3.9V8.75Zm6.8 0h3.74v1.68h.05c.52-.96 1.8-1.98 3.7-1.98 3.96 0 4.7 2.5 4.7 5.76V21h-3.9v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1V21h-3.9V8.75Z"/></svg>
+        </div>
+        <h4>LINKEDIN</h4>
+        <div class="value">linkedin.com/in/belicia-denny</div>
+      </a>
+      <a class="contact-card" href="https://github.com/beliciadenny" target="_blank" rel="noopener">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.9-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.93.68 1.87v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </div>
+        <h4>GITHUB</h4>
+        <div class="value">github.com/beliciadenny</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Belicia Denny. All Rights Reserved. Designed &amp; Developed by Belicia Denny.</p>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../python-ai/">Python &amp; AI</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

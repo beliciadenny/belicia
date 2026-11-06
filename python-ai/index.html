@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belicia Denny | Python &amp; AI Applications</title>
+<meta name="description" content="Portfolio of Belicia Denny showcasing Python backend development, AI applications, FastAPI, LLM integration, and intelligent software solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-name">Belicia<span>.</span>Denny</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas class="hero-canvas"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <span class="open-badge"><i></i>Open to work</span>
+      <div class="eyebrow">PYTHON · AI · BACKEND DEVELOPMENT</div>
+      <h1>Belicia Denny</h1>
+      <p class="role-line">Python Backend Developer · AI Application Developer</p>
+      <p class="lede">I build intelligent backend applications using Python, FastAPI, and modern AI technologies. My projects combine APIs, databases, LLMs, and automation to solve real-world business problems through scalable software solutions.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="../assets/resume/resume-ai.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/beliciadenny" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/belicia-denny" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <span class="float-chip">Python</span>
+      <span class="float-chip">FastAPI</span>
+      <span class="float-chip">LangChain</span>
+      <span class="float-chip">Ollama</span>
+      <span class="float-chip">TensorFlow</span>
+      <span class="float-chip">Docker</span>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">ABOUT ME</div>
+      <h2>Building intelligent AI applications</h2>
+      <p>I'm a Computer Science graduate passionate about building intelligent software using Python and modern AI technologies. I enjoy designing backend systems, developing REST APIs, and integrating large language models into practical applications.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h4>Backend Development</h4>
+        <p>Building scalable REST APIs using FastAPI and Python.</p>
+      </div>
+      <div class="feature-item">
+        <h4>AI Applications</h4>
+        <p>Developing intelligent applications powered by LLMs and LangChain.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Database Systems</h4>
+        <p>Designing reliable data storage with PostgreSQL and SQLAlchemy.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Modern Development</h4>
+        <p>Building full-stack applications with React, TypeScript and Docker.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">PROJECTS</div>
+      <h2>Problems worth solving</h2>
+      <p>Every project here started with a real problem. Open one to see the screenshots, what I built, and the tools behind it.</p>
+    </div>
+
+    <div class="project-list">
+
+      <!-- 01 AI Incident Root Cause Analyzer -->
+      <article class="project-row"
+        data-title="AI Incident Root Cause Analyzer"
+        data-images="../assets/images/incident.png"
+        data-captions="Dashboard">
+        <div class="row-media"><img src="../assets/images/incident.png" alt="AI Incident Root Cause Analyzer dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">01</span>
+          <h3>AI Incident Root Cause Analyzer</h3>
+          <p class="row-question">When production breaks, what failed, and why?</p>
+          <div class="row-tags"><span>Python</span><span>TensorFlow</span><span>XGBoost</span><span>FastAPI</span><span>SHAP</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: AI Incident Root Cause Analyzer">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 01 · AIOps &amp; Deep Learning</p>
+          <h3>AI Incident Root Cause Analyzer</h3>
+          <p class="case-question">When production breaks, what failed, and why?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built an AIOps system that analyzes application telemetry to detect anomalies, using a classical anomaly detector alongside a deep-learning LSTM Autoencoder.</li>
+            <li>Classified the most likely root cause of each incident and predicted its severity.</li>
+            <li>Explained every prediction with SHAP so the reasoning is visible instead of a black box.</li>
+            <li>Exposed everything through a FastAPI REST API and an interactive Streamlit dashboard, with PostgreSQL storage and Docker Compose.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>XGBoost</span><span>TensorFlow</span><span>Keras</span><span>SHAP</span><span>FastAPI</span><span>Pydantic</span><span>Uvicorn</span><span>Streamlit</span><span>Plotly</span><span>Matplotlib</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Docker</span><span>Docker Compose</span><span>pytest</span><span>Git</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/ai-incident-root-cause-analyzer" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Enterprise AI Documentation Assistant -->
+      <article class="project-row"
+        data-title="Enterprise AI Documentation Assistant"
+        data-images="../assets/images/ai-enterprice.png"
+        data-captions="Streamlit interface">
+        <div class="row-media"><img src="../assets/images/ai-enterprice.png" alt="Enterprise AI Documentation Assistant interface" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">02</span>
+          <h3>Enterprise AI Documentation Assistant</h3>
+          <p class="row-question">How can staff get answers from internal documents without sending data to a third party?</p>
+          <div class="row-tags"><span>Python</span><span>FastAPI</span><span>LangChain</span><span>FAISS</span><span>Ollama</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Enterprise AI Documentation Assistant">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 02 · GenAI &amp; RAG</p>
+          <h3>Enterprise AI Documentation Assistant</h3>
+          <p class="case-question">How can staff get answers from internal documents without sending data to a third party?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built a Retrieval-Augmented Generation (RAG) application for semantic document search and question answering.</li>
+            <li>Ran it on a locally hosted Llama 3.2 model through Ollama, so documents stay on the machine instead of going to a hosted API.</li>
+            <li>Used LangChain and FAISS for retrieval, a FastAPI backend, and a Streamlit interface.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>FastAPI</span><span>LangChain</span><span>FAISS</span><span>Ollama</span><span>Llama 3.2</span><span>Streamlit</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/enterprise-ai-documentation-assistant" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 AI Data Quality Guardian -->
+      <article class="project-row"
+        data-title="AI Data Quality Guardian"
+        data-images="../assets/images/data-quality-guardian.png"
+        data-captions="Application">
+        <div class="row-media"><img src="../assets/images/data-quality-guardian.png" alt="AI Data Quality Guardian application" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">03</span>
+          <h3>AI Data Quality Guardian</h3>
+          <p class="row-question">How do you catch bad data before it ruins an analysis or a model?</p>
+          <div class="row-tags"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>LangChain</span><span>Docker</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: AI Data Quality Guardian">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 03 · Full-Stack AI</p>
+          <h3>AI Data Quality Guardian</h3>
+          <p class="case-question">How do you catch bad data before it ruins an analysis or a model?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built a full-stack web application that profiles CSV and Excel datasets, validates them against rules and scores their quality.</li>
+            <li>Used LangChain with a local Ollama model to explain issues and recommend cleaning steps.</li>
+            <li>Designed the FastAPI REST backend on PostgreSQL, with a React and TypeScript frontend, JWT authentication and role-based access.</li>
+            <li>Added audit logging and PDF report generation, and packaged everything with Docker Compose.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>LangChain</span><span>Ollama</span></div>
+          <p class="case-note">Designed for local deployment with Docker Compose. The full source code, setup guide and documentation are in the GitHub repository.</p>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/ai-data-quality-guardian" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Fake Review Detector -->
+      <article class="project-row"
+        data-title="Fake Review Detector"
+        data-images="../assets/images/fake-review.png"
+        data-captions="Streamlit app">
+        <div class="row-media"><img src="../assets/images/fake-review.png" alt="Fake Review Detector app" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">04</span>
+          <h3>Fake Review Detector</h3>
+          <p class="row-question">Which reviews are genuine, and which were written to mislead?</p>
+          <div class="row-tags"><span>Python</span><span>Scikit-learn</span><span>NLP</span><span>Streamlit</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Fake Review Detector">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 04 · NLP &amp; Machine Learning</p>
+          <h3>Fake Review Detector</h3>
+          <p class="case-question">Which reviews are genuine, and which were written to mislead?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Built an NLP classifier that flags fraudulent business reviews using TF-IDF feature extraction and a Random Forest model.</li>
+            <li>Packaged it as an interactive Streamlit app and deployed it live on Streamlit Cloud.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Scikit-learn</span><span>NLP</span><span>TF-IDF</span><span>Random Forest</span><span>Streamlit</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://fake-review-detector-enpfumjyh4c6ckupxexppl.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="btn btn-ghost" href="https://github.com/beliciadenny/Fake-Review-Detector" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 Dark Pattern Detection -->
+      <article class="project-row"
+        data-title="Dark Pattern Detection"
+        data-images="../assets/images/dark-pattern.png"
+        data-captions="Dashboard">
+        <div class="row-media"><img src="../assets/images/dark-pattern.png" alt="Dark Pattern Detection dashboard" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">05</span>
+          <h3>Dark Pattern Detection</h3>
+          <p class="row-question">Is this e-commerce page helping you shop, or quietly deceiving you?</p>
+          <div class="row-tags"><span>Python</span><span>BeautifulSoup</span><span>NLP</span><span>XGBoost</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Dark Pattern Detection">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 05 · NLP &amp; Machine Learning</p>
+          <h3>Dark Pattern Detection</h3>
+          <p class="case-question">Is this e-commerce page helping you shop, or quietly deceiving you?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Automated web scraping with BeautifulSoup to collect e-commerce page content.</li>
+            <li>Used NLP feature extraction and an XGBoost classifier to detect deceptive interface patterns.</li>
+            <li>Mapped the findings to regulatory guidelines and visualized them in an interactive dashboard.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>BeautifulSoup</span><span>NLP</span><span>XGBoost</span><span>SHAP</span><span>Power BI</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/dark-pattern-detection" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 Online Payment Fraud Detection -->
+      <article class="project-row"
+        data-title="Online Payment Fraud Detection"
+        data-images="../assets/images/fraud-detection.png"
+        data-captions="Model results">
+        <div class="row-media"><img src="../assets/images/fraud-detection.png" alt="Online Payment Fraud Detection results" loading="lazy"></div>
+        <div class="row-body">
+          <span class="row-index">06</span>
+          <h3>Online Payment Fraud Detection</h3>
+          <p class="row-question">Which transactions look fraudulent, and what patterns give them away?</p>
+          <div class="row-tags"><span>Python</span><span>Machine Learning</span><span>Pandas</span></div>
+          <button type="button" class="row-open" aria-label="Open case study: Online Payment Fraud Detection">View case study <span class="arrow">→</span></button>
+        </div>
+        <div class="case-content" hidden>
+          <p class="case-eyebrow">Case 06 · Machine Learning</p>
+          <h3>Online Payment Fraud Detection</h3>
+          <p class="case-question">Which transactions look fraudulent, and what patterns give them away?</p>
+          <h4>What I did</h4>
+          <ul>
+            <li>Trained a machine learning model to flag suspicious financial transactions from behavioral and transaction patterns.</li>
+            <li>Prepared and analyzed the transaction data with Pandas before modeling.</li>
+          </ul>
+          <h4>Tech stack</h4>
+          <div class="case-tags"><span>Python</span><span>Machine Learning</span><span>Pandas</span></div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://github.com/beliciadenny/Online_Payments_Fraud_Detection-MLProject" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">TECHNICAL SKILLS</div>
+      <h2>Tools &amp; technologies</h2>
+      <p>Technologies and tools used for backend development, AI applications, and full-stack engineering.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>BACKEND DEVELOPMENT</h4>
+        <div class="skill-tags"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>JWT Authentication</span><span>SQLAlchemy</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>AI &amp; LLM</h4>
+        <div class="skill-tags"><span>LangChain</span><span>Ollama</span><span>Retrieval-Augmented Generation</span><span>Prompt Engineering</span><span>NLP</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>DATABASES</h4>
+        <div class="skill-tags"><span>PostgreSQL</span><span>MySQL</span><span>SQL</span><span>Database Design</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>FRONTEND</h4>
+        <div class="skill-tags"><span>React</span><span>TypeScript</span><span>HTML</span><span>CSS</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>DEVELOPMENT TOOLS</h4>
+        <div class="skill-tags"><span>Docker</span><span>Git</span><span>GitHub</span><span>Linux</span></div>
+      </div>
+      <div class="skill-card">
+        <h4>PYTHON LIBRARIES</h4>
+        <div class="skill-tags"><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>FAISS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">EDUCATION</div>
+      <h2>Academic background</h2>
+    </div>
+    <div class="edu-card">
+      <div>
+        <h3>Bachelor of Technology (B.Tech)</h3>
+        <div class="edu-sub">Computer Science &amp; Engineering</div>
+        <p>Jyothi Engineering College, Kerala</p>
+      </div>
+      <div class="edu-year">Graduated 2025</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">CONTACT</div>
+      <h2>Let's connect</h2>
+      <p>Interested in Python backend development, AI applications, or intelligent automation? I'm always open to discussing opportunities, collaborating on innovative projects, or connecting with fellow developers.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:beliciadenny@gmail.com">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        </div>
+        <h4>EMAIL</h4>
+        <div class="value">beliciadenny@gmail.com</div>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/belicia-denny" target="_blank" rel="noopener">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.5 8.75h3.9V21h-3.9V8.75Zm6.8 0h3.74v1.68h.05c.52-.96 1.8-1.98 3.7-1.98 3.96 0 4.7 2.5 4.7 5.76V21h-3.9v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1V21h-3.9V8.75Z"/></svg>
+        </div>
+        <h4>LINKEDIN</h4>
+        <div class="value">linkedin.com/in/belicia-denny</div>
+      </a>
+      <a class="contact-card" href="https://github.com/beliciadenny" target="_blank" rel="noopener">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.9-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.93.68 1.87v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </div>
+        <h4>GITHUB</h4>
+        <div class="value">github.com/beliciadenny</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Belicia Denny. All Rights Reserved. Designed &amp; Developed by Belicia Denny.</p>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../data-analytics/">Data &amp; Analytics</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
